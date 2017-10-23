@@ -1,0 +1,24 @@
+<div id="app">
+  <h1>{{ header }}</h1>
+</div>
+<div>
+    <ul>
+      <li v-for="feature in features">
+        {{ feature.title }}
+        <ul>
+          <template v-for="subfeature in feature.subfeatures">
+            <li>
+              {{ subfeature.title }}
+            </li> 
+              <ul>
+                <template v-for="subsubfeature in subfeature.subfeatures">
+                  <li>
+                    {{ subsubfeature.title }}
+                  </li>
+                </template>
+              </ul>
+          </template>
+        </ul>
+      </li>
+    </ul>
+</div>
